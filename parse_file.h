@@ -8,7 +8,8 @@
 #include <vector>
 #include <string>
 
-std::vector<std::string> parseFile(const std::string& fileName);
+std::vector<std::wstring> parseFile(const std::string& fileName);
 
+void stringToWordsVector(const std::wstring& str, std::vector<std::wstring>& words);
 
 #endif //MARKOV_PARSE_FILE_H

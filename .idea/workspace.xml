@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="markov" targetName="markov" />
+      <config projectName="markov" targetName="markov_test" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -11,7 +30,43 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db458fa3-2541-40ba-aa23-2f83a05d8c3c" name="Default Changelist" comment="" />
+    <list default="true" id="db458fa3-2541-40ba-aa23-2f83a05d8c3c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/FileStorage.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FileStorage.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/urls.list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consts.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consts.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/external/catch.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/external/cxxopts.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/dtrain.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/generate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/generate2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/generate_russian.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/generate_with_input.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/no_internet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/train.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/urls_list.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileDownloader.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileDownloader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkovGenerator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MarkovGenerator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkovGenerator.h" beforeDir="false" afterPath="$PROJECT_DIR$/MarkovGenerator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkovSelector.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MarkovSelector.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarkovSelector.h" beforeDir="false" afterPath="$PROJECT_DIR$/MarkovSelector.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/helpers.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers.h" beforeDir="false" afterPath="$PROJECT_DIR$/helpers.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parse_file.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/parse_file.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parse_file.h" beforeDir="false" afterPath="$PROJECT_DIR$/parse_file.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,13 +79,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="D:\GoogleDrive\MADE\Interview\markov\.idea" />
-      </set>
-    </option>
-  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="bQKrETjE" />
   </component>
@@ -38,41 +86,44 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/external" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/cmake-build-debug" />
       <recent name="D:\GoogleDrive\MADE\Interview\markov\external" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/external" />
       <recent name="D:\GoogleDrive\MADE\Interview\markov\exceptions" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="markov" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="markov" TARGET_NAME="markov" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="markov" RUN_TARGET_NAME="markov">
+  <component name="RunManager" selected="CMake Application.markov">
+    <configuration name="markov_test" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="markov" TARGET_NAME="markov_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="markov" RUN_TARGET_NAME="markov_test" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="markov" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="download" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="markov" TARGET_NAME="markov" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="markov" RUN_TARGET_NAME="markov">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
+    <list>
+      <item itemvalue="Catch.markov_test" />
+      <item itemvalue="CMake Application.markov" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -86,6 +137,9 @@
       <updated>1588071899988</updated>
       <workItem from="1588071901344" duration="28162000" />
       <workItem from="1588158418797" duration="1402000" />
+      <workItem from="1588237229785" duration="21804000" />
+      <workItem from="1588350672128" duration="45309000" />
+      <workItem from="1588520682699" duration="4836000" />
     </task>
     <task id="LOCAL-00001" summary="Markov text generator algorithm was implemented">
       <created>1588159350119</created>
@@ -98,53 +152,95 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Markov text generator algorithm was implemented" />
     <option name="LAST_COMMIT_MESSAGE" value="Markov text generator algorithm was implemented" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="454" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588423261619">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="453" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1842.897@72.27.1842.897" timestamp="1588407839004" />
+    <state x="454" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1588423261619" />
+    <state x="677" y="277" width="621" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588357803023">
+      <screen x="72" y="27" width="1842" height="897" />
+    </state>
+    <state x="677" y="277" width="621" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1842.897@72.27.1842.897" timestamp="1588357803023" />
+    <state x="729" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588436731883">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="729" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1588436731883" />
     <state x="585" y="112" key="CommitChangelistDialog2" timestamp="1588159347807">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="112" key="CommitChangelistDialog2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1588159347807" />
-    <state width="570" height="466" key="DebuggerActiveHint" timestamp="1588096706289">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="549" height="472" key="DebuggerActiveHint" timestamp="1588351553317">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="570" height="466" key="DebuggerActiveHint/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1588096706289" />
-    <state width="1877" height="208" key="GridCell.Tab.0.bottom" timestamp="1588103568019">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="549" height="472" key="DebuggerActiveHint/72.27.1848.1053@72.27.1848.1053" timestamp="1588351553317" />
+    <state width="1802" height="180" key="GridCell.Tab.0.bottom" timestamp="1588439760777">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.bottom/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1588103568018" />
-    <state width="1877" height="208" key="GridCell.Tab.0.center" timestamp="1588103568018">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1796" height="204" key="GridCell.Tab.0.bottom/72.27.1842.897@72.27.1842.897" timestamp="1588407945838" />
+    <state width="1802" height="180" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1588439760777" />
+    <state width="1802" height="180" key="GridCell.Tab.0.center" timestamp="1588439760776">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.center/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1588103568018" />
-    <state width="1877" height="208" key="GridCell.Tab.0.left" timestamp="1588103568018">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1796" height="204" key="GridCell.Tab.0.center/72.27.1842.897@72.27.1842.897" timestamp="1588407945837" />
+    <state width="1802" height="180" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1588439760776" />
+    <state width="1802" height="180" key="GridCell.Tab.0.left" timestamp="1588439760776">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.left/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1588103568018" />
-    <state width="1877" height="208" key="GridCell.Tab.0.right" timestamp="1588103568018">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1796" height="204" key="GridCell.Tab.0.left/72.27.1842.897@72.27.1842.897" timestamp="1588407945837" />
+    <state width="1802" height="180" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1588439760776" />
+    <state width="1802" height="180" key="GridCell.Tab.0.right" timestamp="1588439760777">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1877" height="208" key="GridCell.Tab.0.right/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1588103568018" />
-    <state width="1877" height="311" key="GridCell.Tab.1.bottom" timestamp="1588097179686">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1796" height="204" key="GridCell.Tab.0.right/72.27.1842.897@72.27.1842.897" timestamp="1588407945838" />
+    <state width="1802" height="180" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1588439760777" />
+    <state width="1802" height="296" key="GridCell.Tab.1.bottom" timestamp="1588423761644">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1877" height="311" key="GridCell.Tab.1.bottom/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1588097179686" />
-    <state width="1877" height="311" key="GridCell.Tab.1.center" timestamp="1588097179686">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1796" height="277" key="GridCell.Tab.1.bottom/72.27.1842.897@72.27.1842.897" timestamp="1588407935614" />
+    <state width="1802" height="296" key="GridCell.Tab.1.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1588423761644" />
+    <state width="1802" height="296" key="GridCell.Tab.1.center" timestamp="1588423761643">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1877" height="311" key="GridCell.Tab.1.center/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1588097179686" />
-    <state width="1877" height="311" key="GridCell.Tab.1.left" timestamp="1588097179686">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1796" height="277" key="GridCell.Tab.1.center/72.27.1842.897@72.27.1842.897" timestamp="1588407935612" />
+    <state width="1802" height="296" key="GridCell.Tab.1.center/72.27.1848.1053@72.27.1848.1053" timestamp="1588423761643" />
+    <state width="1802" height="296" key="GridCell.Tab.1.left" timestamp="1588423761643">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1877" height="311" key="GridCell.Tab.1.left/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1588097179686" />
-    <state width="1877" height="311" key="GridCell.Tab.1.right" timestamp="1588097179686">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1796" height="277" key="GridCell.Tab.1.left/72.27.1842.897@72.27.1842.897" timestamp="1588407935612" />
+    <state width="1802" height="296" key="GridCell.Tab.1.left/72.27.1848.1053@72.27.1848.1053" timestamp="1588423761643" />
+    <state width="1802" height="296" key="GridCell.Tab.1.right" timestamp="1588423761643">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1877" height="311" key="GridCell.Tab.1.right/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1588097179686" />
+    <state width="1796" height="277" key="GridCell.Tab.1.right/72.27.1842.897@72.27.1842.897" timestamp="1588407935612" />
+    <state width="1802" height="296" key="GridCell.Tab.1.right/72.27.1848.1053@72.27.1848.1053" timestamp="1588423761643" />
     <state x="461" y="163" key="SettingsEditor" timestamp="1588101203273">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -161,19 +257,24 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="679" y="312" key="git4idea.merge.GitPullDialog/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1588159648643" />
+    <state x="660" y="252" key="run.anything.popup" timestamp="1588418943063">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="660" y="252" key="run.anything.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1588418943063" />
+    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1588431770507">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1588431770507" />
   </component>
   <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="CMakeRunConfiguration">
-        <watch expression="reversedWordPairs" />
-        <watch expression="selectionMap" />
-        <watch expression="uniformDistribution" />
-        <watch expression="lowerBoundIt-&gt;second" />
-        <watch expression="wordsCount" />
-        <watch expression="cumulativeFrequencyPair" language="ObjectiveC" />
-        <watch expression="isTrainingFinished" />
-        <watch expression="selectionMap" />
-      </configuration>
-    </watches-manager>
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/external/cxxopts.hpp</url>
+          <line>72</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

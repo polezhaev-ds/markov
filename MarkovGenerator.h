@@ -13,23 +13,34 @@
 
 class MarkovGenerator {
 public:
-    MarkovGenerator(std::size_t chainSize):
-        chainSize(chainSize), isTrainingFinished(false)
+    explicit MarkovGenerator(std::size_t order):
+        order(order), isTrainingFinished(false)
     {
+        if (order == 0)
+            throw std::invalid_argument(u8"Error! Invalid argument order! It should be greater than zero!");
     }
 
-    void train(const std::vector<std::string>& text);
-    std::string generateText(const std::vector<std::string>& startingTextWords, std::size_t length);
+    MarkovGenerator(const MarkovGenerator& generator) = default;
+    MarkovGenerator(MarkovGenerator&& generator) = default;
+    MarkovGenerator& operator = (const MarkovGenerator& generator) = default;
+    MarkovGenerator& operator = (MarkovGenerator&& generator) = default;
 
-    void serialize(std::ofstream& out) const;
-    void deserialize(std::ifstream& inp);
+    void train(const std::vector<std::wstring>& text);
+    std::wstring generateText(const std::vector<std::wstring>& startingTextWords, std::size_t length);
 
-    void switchToInferenceMode();
+    void serialize(const std::string& fileName) const;
+    static MarkovGenerator deserialize(const std::string& fileName);
+
+    void switchToGenerationMode();
     void switchToTrainingMode();
+
+    [[nodiscard]] std::size_t getOrder() const {
+        return order;
+    }
 private:
-    std::size_t chainSize;
+    std::size_t order;
     bool isTrainingFinished;
-    std::unordered_map<std::string, MarkovSelector> selectionMap;
+    std::unordered_map<std::wstring, MarkovSelector> selectionMap;
 
 };
 

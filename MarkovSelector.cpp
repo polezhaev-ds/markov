@@ -7,21 +7,18 @@
 #include "MarkovSelector.h"
 #include "helpers.h"
 
-//std::mt19937 MarkovSelector::generator; // (std::chrono::system_clock::now().time_since_epoch().count());
-//std::uniform_int_distribution<std::size_t> MarkovSelector::uniformDistribution;
-
-void MarkovSelector::update(const std::string& word) {
+void MarkovSelector::update(const std::wstring& word) {
     ++wordFrequency[word];
     ++wordsCount;
 }
 
-std::string MarkovSelector::selectRandomWord() {
+std::wstring MarkovSelector::selectRandomWord() {
     if (!isTrainingFinished) {
         switchToInferenceMode();
     }
     int randomValue = getRandomSizeTNumber(1, wordsCount );
     auto lowerBoundIt = std::lower_bound(cumulativeFrequencyPair.begin(), cumulativeFrequencyPair.end(), randomValue,
-        [](const std::pair<std::size_t, std::string>& pair, std::size_t value) {
+        [](const std::pair<std::size_t, std::wstring>& pair, std::size_t value) {
             return pair.first < value;
         }
     );
@@ -29,21 +26,35 @@ std::string MarkovSelector::selectRandomWord() {
 }
 
 void MarkovSelector::serialize(std::ofstream& out) const {
+    std::size_t size;
+    std::size_t tmpStringSize;
+    std::string tmpString;
     if (isTrainingFinished) {
-        out << cumulativeFrequencyPair.size() << wordsCount;
+        size = cumulativeFrequencyPair.size();
+        out.write((char *)&size, sizeof size);
+        out.write((char *)&wordsCount, sizeof wordsCount);
         for (const auto& pair : cumulativeFrequencyPair) {
-            out << pair.first << pair.second;
+            out.write((char *)&pair.first, sizeof pair.first);
+            tmpString = wstr2str(pair.second);
+            tmpStringSize = tmpString.size();
+            out.write((char *)&tmpStringSize, sizeof tmpStringSize);
+            out.write(tmpString.data(), tmpStringSize);
         }
     } else {
-        out << wordFrequency.size() << wordsCount;
+        size = wordFrequency.size();
+        out.write((char *)&size, sizeof size);
+        out.write((char *)&wordsCount, sizeof wordsCount);
         for (const auto& pair : wordFrequency) {
-            out << pair.first << pair.second;
+            tmpString = wstr2str(pair.first);
+            tmpStringSize = tmpString.size();
+            out.write((char *)&tmpStringSize, sizeof tmpStringSize);
+            out.write(tmpString.data(), tmpStringSize);
+            out.write((char *)&pair.second, sizeof pair.second);
         }
     }
 }
 
 void MarkovSelector::deserialize(std::ifstream& inp, bool isTrainingFinished) {
-    std::string word;
     std::size_t frequency;
 
     this->isTrainingFinished = isTrainingFinished;
@@ -51,19 +62,32 @@ void MarkovSelector::deserialize(std::ifstream& inp, bool isTrainingFinished) {
     cumulativeFrequencyPair.clear();
 
     std::size_t keysCount;
-    inp >> keysCount >> wordsCount;
+    inp.read((char *)&keysCount, sizeof keysCount);
+    inp.read((char *)&wordsCount, sizeof wordsCount);
+    std::size_t tmpStringSize;
+    char* tmpString;
 
     if (isTrainingFinished) {
         cumulativeFrequencyPair.reserve(keysCount);
         for (std::size_t i = 0; i < keysCount; ++i) {
-            inp >> frequency >> word;
-            cumulativeFrequencyPair.emplace_back(frequency, word);
+            inp.read((char *)&frequency, sizeof frequency);
+            inp.read((char *)&tmpStringSize, sizeof tmpStringSize);
+            tmpString = new char [tmpStringSize + 1];
+            inp.read(tmpString, tmpStringSize);
+            tmpString[tmpStringSize] = '\0';
+            cumulativeFrequencyPair.emplace_back(frequency, str2wstr(std::string(tmpString)));
+            delete[] tmpString;
         }
     } else {
         wordFrequency.reserve(keysCount);
         for (std::size_t i = 0; i < keysCount; ++i) {
-            inp >> word >> frequency;
-            wordFrequency[word] = frequency;
+            inp.read((char *)&tmpStringSize, sizeof tmpStringSize);
+            tmpString = new char [tmpStringSize + 1];
+            inp.read(tmpString, tmpStringSize);
+            tmpString[tmpStringSize] = '\0';
+            inp.read((char *)&frequency, sizeof frequency);
+            wordFrequency[str2wstr(std::string(tmpString))] = frequency;
+            delete[] tmpString;
         }
     }
 }

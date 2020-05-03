@@ -18,9 +18,14 @@ public:
     {
     }
 
-    void update(const std::string& word);
+    MarkovSelector(const MarkovSelector& selector) = default;
+    MarkovSelector(MarkovSelector&& selector) = default;
+    MarkovSelector& operator = (const MarkovSelector& selector) = default;
+    MarkovSelector& operator = (MarkovSelector&& selector) = default;
 
-    std::string selectRandomWord();
+    void update(const std::wstring& word);
+
+    std::wstring selectRandomWord();
 
     void serialize(std::ofstream& out) const;
     void deserialize(std::ifstream& inp, bool isTrainingFinished);
@@ -30,8 +35,8 @@ public:
 
 private:
 
-    std::unordered_map<std::string, std::size_t> wordFrequency;
-    std::vector<std::pair<std::size_t, std::string>> cumulativeFrequencyPair;
+    std::unordered_map<std::wstring, std::size_t> wordFrequency;
+    std::vector<std::pair<std::size_t, std::wstring>> cumulativeFrequencyPair;
     std::size_t wordsCount;
     bool isTrainingFinished;
 };
